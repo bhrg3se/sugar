@@ -15,7 +15,8 @@ Content-Type: application/json
 Cookie: token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjgwMDAwMDAwMDAwMCwidXNlcklkIjoiMSJ9.dYr-pfXmHAXHLZPywLTBxoH8HcN-nytCgrZvGtyDQyU_RTa6J5JQ406k7v8OYDE0HUmheOem-AYEeDw3kpQaaMezOwUzrcbRJLWzZARqK91sO6dt66XgcWCdQydXUF6zYbvQwqgeIYelQJTLbFouxxF0vZye1xzrDYIHFc0iXS0
 
 {
-  "name": "Door 101"
+  "name": "Door 101",
+  "acmeDeviceID": "asu8csanj"
 }
 
 
