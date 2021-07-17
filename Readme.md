@@ -3,7 +3,7 @@
 ## Setup and run
 
 1. Start a postgres server.
-2. Create `/etc/sugar/config/config.toml`. You can edit and use the [sample config](build/config.toml).
+2. Create `/etc/sugar/config/config.toml`. You can edit and use the [sample config](misc/config.toml).
 3. Run `go build -o sugar`
 4. Run `./sugar`
 
@@ -11,27 +11,29 @@ The default credentials is `root:root`
 
 ## List of APIs
 
-#### POST /auth/login
+### Normal user APIS
 
-#### POST /auth/setpassword
+- POST /auth/login
 
-#### POST /door/action
+- POST /auth/setpassword
 
-#### POST /door/list
+- POST /door/action
+
+- POST /door/list
 
 ### Admin APIS
 
-#### POST /admin/door/add
+- POST /admin/door/add
 
-#### POST /admin/door/remove
+- POST /admin/door/remove
 
-#### POST /admin/user/add
+- POST /admin/user/add
 
-#### POST /admin/user/remove
+- POST /admin/user/remove
 
-#### POST /admin/permission/add
+- POST /admin/permission/add
 
-#### POST /admin/permission/remove
+- POST /admin/permission/remove
 
 > Check out these [examples](misc/rest/api.rest)
 
