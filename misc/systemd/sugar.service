@@ -1,0 +1,12 @@
+[Unit]
+Description=sugar
+Documentation=https://sugar
+#Requires= postgresql.service
+
+[Service]
+ExecStart=/usr/local/bin/sugar -f
+ExecStop=/usr/bin/pkill sugar
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

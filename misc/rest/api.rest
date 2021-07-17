@@ -1,0 +1,110 @@
+
+### Login as root
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "root",
+  "password": "root"
+}
+
+
+### Add new door using admin user's token
+POST http://localhost:8080/api/v1/admin/door/add
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjgwMDAwMDAwMDAwMCwidXNlcklkIjoiMSJ9.dYr-pfXmHAXHLZPywLTBxoH8HcN-nytCgrZvGtyDQyU_RTa6J5JQ406k7v8OYDE0HUmheOem-AYEeDw3kpQaaMezOwUzrcbRJLWzZARqK91sO6dt66XgcWCdQydXUF6zYbvQwqgeIYelQJTLbFouxxF0vZye1xzrDYIHFc0iXS0
+
+{
+  "name": "Door 101"
+}
+
+
+
+### Add new user using admin user's token
+POST http://localhost:8080/api/v1/admin/user/add
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjgwMDAwMDAwMDAwMCwidXNlcklkIjoiMSJ9.dYr-pfXmHAXHLZPywLTBxoH8HcN-nytCgrZvGtyDQyU_RTa6J5JQ406k7v8OYDE0HUmheOem-AYEeDw3kpQaaMezOwUzrcbRJLWzZARqK91sO6dt66XgcWCdQydXUF6zYbvQwqgeIYelQJTLbFouxxF0vZye1xzrDYIHFc0iXS0
+
+{
+  "firstName": "Bhargab",
+  "lastName": "Acharya",
+  "email": "bhrg3se@gmail.com",
+  "isAdmin": false
+}
+
+
+
+
+### Give permission using admin user's token
+POST http://localhost:8080/api/v1/admin/permission/add
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjgwMDAwMDAwMDAwMCwidXNlcklkIjoiMSJ9.dYr-pfXmHAXHLZPywLTBxoH8HcN-nytCgrZvGtyDQyU_RTa6J5JQ406k7v8OYDE0HUmheOem-AYEeDw3kpQaaMezOwUzrcbRJLWzZARqK91sO6dt66XgcWCdQydXUF6zYbvQwqgeIYelQJTLbFouxxF0vZye1xzrDYIHFc0iXS0
+
+{
+  "userID": "8e70dfa5-4dc8-45ac-a65a-0369d3e5f169",
+  "doorID": "98a3a49e-f281-4fe1-bdae-14d9c30bf963"
+}
+
+
+
+
+
+### Login using normal user
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "annettemoore@dyer-summers.com",
+  "password": ""
+}
+
+
+
+
+
+### Get a list doors that I can access
+GET http://localhost:8080/api/v1/door/list
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjgwMDAwMDAwMDAwMCwidXNlcklkIjoiOGU3MGRmYTUtNGRjOC00NWFjLWE2NWEtMDM2OWQzZTVmMTY5In0.EHAbSSnjeyHknzn5D8viJQEg5uxvrsdlcgU9yrz8rxdjhONiw_KK_wTIFTKvEdqfhaqeWsXrUD4qlx8P8xFnfoozgOnC3XyhK4FVrQaEtM9tIgyr1y3_d7qg6z0TOCxXVR3ABhyWFyxDzOrLQX6KgkRyDWIQ-bj6_-_aKZB8crU
+
+
+
+### Lock door "Unit 100"
+POST http://localhost:8080/api/v1/door/action
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjgwMDAwMDAwMDAwMCwidXNlcklkIjoiOGU3MGRmYTUtNGRjOC00NWFjLWE2NWEtMDM2OWQzZTVmMTY5In0.EHAbSSnjeyHknzn5D8viJQEg5uxvrsdlcgU9yrz8rxdjhONiw_KK_wTIFTKvEdqfhaqeWsXrUD4qlx8P8xFnfoozgOnC3XyhK4FVrQaEtM9tIgyr1y3_d7qg6z0TOCxXVR3ABhyWFyxDzOrLQX6KgkRyDWIQ-bj6_-_aKZB8crU
+
+{
+  "action": "lock",
+  "door_id": "50155013-d8b3-473c-9554-c6b5ec1a53e1"
+}
+
+
+
+
+### Unlock door "Unit 100"
+POST http://localhost:8080/api/v1/door/action
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjgwMDAwMDAwMDAwMCwidXNlcklkIjoiOGU3MGRmYTUtNGRjOC00NWFjLWE2NWEtMDM2OWQzZTVmMTY5In0.EHAbSSnjeyHknzn5D8viJQEg5uxvrsdlcgU9yrz8rxdjhONiw_KK_wTIFTKvEdqfhaqeWsXrUD4qlx8P8xFnfoozgOnC3XyhK4FVrQaEtM9tIgyr1y3_d7qg6z0TOCxXVR3ABhyWFyxDzOrLQX6KgkRyDWIQ-bj6_-_aKZB8crU
+
+{
+  "action": "unlock",
+  "door_id": "50155013-d8b3-473c-9554-c6b5ec1a53e1"
+}
+
+
+### Check door "Unit 100" status
+POST http://localhost:8080/api/v1/door/action
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjgwMDAwMDAwMDAwMCwidXNlcklkIjoiOGU3MGRmYTUtNGRjOC00NWFjLWE2NWEtMDM2OWQzZTVmMTY5In0.EHAbSSnjeyHknzn5D8viJQEg5uxvrsdlcgU9yrz8rxdjhONiw_KK_wTIFTKvEdqfhaqeWsXrUD4qlx8P8xFnfoozgOnC3XyhK4FVrQaEtM9tIgyr1y3_d7qg6z0TOCxXVR3ABhyWFyxDzOrLQX6KgkRyDWIQ-bj6_-_aKZB8crU
+
+{
+  "action": "check",
+  "door_id": "50155013-d8b3-473c-9554-c6b5ec1a53e1"
+}
+
+
+
+
+
+

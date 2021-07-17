@@ -1,0 +1,39 @@
+[database]
+host = "127.0.0.1"
+user = ""
+password = ""
+port = "5432"
+name = "sugar"
+[logging]
+level = "TRACE"
+[server]
+listen = "0.0.0.0:8080"
+[acme]
+apiKey = ""
+apiURL = ""
+[keys]
+private = '''
+-----BEGIN RSA PRIVATE KEY-----
+MIICXQIBAAKBgQCMID6PEVTL1DQQdU+lGvHH1wTuhwRJcdsvHAasb6LwoLohkUFw
+slBNe/R9OdETzR++KIQSHygkkUCZVHarBpZVZgpuXVAFIZf7D3ggPSAgvfahnfAr
+aD94rGH4dq1cdQNJ8/6tByh1iOcM+CtlCDpAado+CTA0C5n6WVYZJrIb5wIDAQAB
+AoGANcWF3CbdcF5dIFe0GXqOf45ukQ30wi5T2u8ZTICGeWpkIs932kRC9ojzmD5g
+kgWsAa/Qhpe4MtgefvhflV+wvj29Jt9IiXKtT2w1ckzPlGrAFM3O0YFK6uNlckUE
+0OLKUIC7/XMUYQvNGlCLU+5eY+eIfZr2/Iq0FWUAAufszSkCQQDsRGL8VqOvLCAx
+IXygUF8mjgrPX1LyB4TGvoAv4abIa0/8iHq6alPycsouhF1CCiKDTN9uLYgfw0cW
+hGCeHntLAkEAl9RE2M0SoE/r/rr7VdzinrjwaBBUDESNimhxe3E/Ng2lghv+3Od1
+P/LcLGfiFUxnAmOAJEsFZpW5fWrhSDIEVQJBAJkuNWcY3QLjfvObnGtr8GTUztlo
+GiTlDwaz1/QzPqjOOoumCLv31/lmxwKlurjoTTwHiQyr5IeDWgGVTfb2GEUCQQCW
+EPCbeNZYLaaMeDPDgjdbul+j+7+XAIsFqoXABQb9Xi+gkhsuLHfvZRPJsEP92S5X
+ZhFZzezgoExeci2JNiahAkAh5MWjK3A8tvv0b18pmu/5bYMEZ0Ku8SvIlWvx5OIa
+/VCjt61mvRKD7XcXMSS/kD33+hlfVb5RupeQyBWT/kws
+-----END RSA PRIVATE KEY-----
+'''
+public = '''
+-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCMID6PEVTL1DQQdU+lGvHH1wTu
+hwRJcdsvHAasb6LwoLohkUFwslBNe/R9OdETzR++KIQSHygkkUCZVHarBpZVZgpu
+XVAFIZf7D3ggPSAgvfahnfAraD94rGH4dq1cdQNJ8/6tByh1iOcM+CtlCDpAado+
+CTA0C5n6WVYZJrIb5wIDAQAB
+-----END PUBLIC KEY-----
+'''
